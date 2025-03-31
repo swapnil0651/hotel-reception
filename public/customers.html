@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Reception - Customers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Hotel Reception</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Check-In</a></li>
+        <li><a href="/customers" class="active">View Customers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="customers-list">
+      <h2>Checked-In Customers</h2>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by name, room, etc.">
+      </div>
+      <table id="customersTable">
+        <thead>
+          <tr>
+            <th>Room</th>
+            <th>Name</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="customersTableBody">
+          <!-- Customer data will be inserted here -->
+        </tbody>
+      </table>
+    </section>
+
+    <div id="customerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Customer Details</h2>
+        <div id="customerDetails">
+          <!-- Customer details will be inserted here -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Hotel Reception App</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Reception</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Hotel Reception</h1>
+    <nav>
+      <ul>
+        <li><a href="/" class="active">Check-In</a></li>
+        <li><a href="/customers">View Customers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="check-in-form">
+      <h2>Customer Check-In</h2>
+      <form id="checkInForm">
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="roomNumber">Room Number:</label>
+          <input type="text" id="roomNumber" name="roomNumber" required>
+        </div>
+        <div class="form-group">
+          <label for="checkOutDate">Check-Out Date:</label>
+          <input type="date" id="checkOutDate" name="checkOutDate" required>
+        </div>
+        <div class="form-group">
+          <label for="idType">ID Type:</label>
+          <select id="idType" name="idType" required>
+            <option value="">Select ID Type</option>
+            <option value="passport">Passport</option>
+            <option value="driverLicense">Driver's License</option>
+            <option value="nationalId">National ID</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="idNumber">ID Number:</label>
+          <input type="text" id="idNumber" name="idNumber" required>
+        </div>
+        <button type="submit">Check In</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Hotel Reception App</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
