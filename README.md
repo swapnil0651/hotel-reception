@@ -21,14 +21,14 @@ A web-based hotel reception system for managing customer check-ins and check-out
 
 ### Option 1: Using the provided Docker Compose file (Recommended)
 
-1. Create a file named docker-compose.yml with the following content:
+1. Use the file named docker-compose.alt.yml with the following content:
 
 version: '3'
 services:
   app:
     image: swapnil0651/hotel-reception:v2
     ports:
-      - "3000:3000"
+      - "3001:3000"
     depends_on:
       - mongo
     environment:
@@ -37,7 +37,7 @@ services:
   mongo:
     image: mongo:latest
     ports:
-      - "27017:27017"
+      - "27018:27017"
     volumes:
       - mongo_data:/data/db
 
@@ -46,9 +46,9 @@ volumes:
   
 
 2. Run the application:
-   docker-compose up
+   docker-compose -f docker-compose.alt.yml up
 
-3. Access the application at http://localhost:3000
+3. Access the application at http://localhost:3001
 
 ### Option 2: Running the Docker image directly
 
