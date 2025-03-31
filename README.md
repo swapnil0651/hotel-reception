@@ -19,6 +19,63 @@ A web-based hotel reception system for managing customer check-ins and check-out
 
 ## Running with Docker
 
+## Pre-requisites for Running the App
+
+Before running this app, ensure the following requirements are met:
+
+### 1. **Docker and Docker Compose Installed**
+
+This app requires **Docker** and **Docker Compose** to be installed on your system. Follow the steps below to install both:
+
+---
+
+### Docker Compose Installation
+
+1. **Install Docker (if not already installed):**
+
+   ```bash
+   sudo apt update
+   sudo apt install docker.io
+   ```
+
+2. **Download Docker Compose:**
+
+   Download the latest version of Docker Compose:
+
+   ```bash
+   sudo curl -L "https://github.com/docker/compose/releases/download/v2.17.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   ```
+
+3. **Apply executable permissions:**
+
+   Make Docker Compose executable:
+
+   ```bash
+   sudo chmod +x /usr/local/bin/docker-compose
+   ```
+
+4. **Verify the installation:**
+
+   Confirm that Docker Compose has been successfully installed by checking the version:
+
+   ```bash
+   docker-compose --version
+   ```
+
+---
+
+### 2. **Docker Service Running**
+
+Ensure that the Docker service is up and running. Start it if necessary:
+
+```bash
+sudo systemctl start docker
+```
+
+---
+
+Once Docker and Docker Compose are installed and running, you're ready to proceed with running the app!
+
 ### Option 1: Using the provided Docker Compose file (Recommended)
 
 1. Use the file named docker-compose.alt.yml with the following content:
