@@ -43,6 +43,7 @@ services:
 
 volumes:
   mongo_data:
+  
 
 2. Run the application:
    docker-compose up
@@ -72,20 +73,21 @@ If you already have MongoDB running:
 
 1. Clone the repository:
    git clone https://github.com/swapnil0651/hotel-reception.git
+   
    cd hotel-reception
 
-2. Install dependencies:
+3. Install dependencies:
    npm install
 
-3. Make sure MongoDB is running locally
+4. Make sure MongoDB is running locally
 
-4. Start the application:
+5. Start the application:
    npm start
 
    For development with auto-restart:
    npm run dev
 
-5. Access the application at http://localhost:3000
+6. Access the application at http://localhost:3000
 
 ## Project Structure
 
