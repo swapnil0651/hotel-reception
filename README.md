@@ -104,7 +104,7 @@ volumes:
 ```
 
 2. Run the application:
-   ```bash
+```bash
 docker-compose -f docker-compose.alt.yml up
 ```
 
@@ -115,12 +115,12 @@ docker-compose -f docker-compose.alt.yml up
 If you already have MongoDB running:
 
 1. Pull the image:
-   ```bash
+```bash
 docker pull swapnil0651/hotel-reception:v2
 ```
 
 2. Run the container:
-   ```bash
+ ```bash
 docker run -p 3000:3000 -e MONGODB_URI=mongodb://your-mongodb-host:27017/hotel swapnil0651/hotel-reception:v2
 ```
 
@@ -136,26 +136,26 @@ docker run -p 3000:3000 -e MONGODB_URI=mongodb://your-mongodb-host:27017/hotel s
 ### Setup
 
 1. Clone the repository:
-   ```bash
+ ```bash
 git clone https://github.com/swapnil0651/hotel-reception.git
 
 cd hotel-reception
 ```
 
 2. Install dependencies:
-   ```bash
+```bash
 npm install
 ```
 
 3. Make sure MongoDB is running locally
 
 4. Start the application:
-   ```bash
+```bash
 npm start
 ```
 
    For development with auto-restart:
-   ```bash
+```bash
 npm run dev
 ```
 
