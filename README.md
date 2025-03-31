@@ -84,7 +84,7 @@ Once Docker and Docker Compose are installed and running, you're ready to procee
 version: '3'
 services:
   app:
-    image: swapnil0651/hotel-reception:v2
+    image: swapnil0651/hotel-reception:v3
     ports:
       - "3001:3000"
     depends_on:
@@ -116,12 +116,12 @@ If you already have MongoDB running:
 
 1. Pull the image:
 ```bash
-docker pull swapnil0651/hotel-reception:v2
+docker pull swapnil0651/hotel-reception:v3
 ```
 
 2. Run the container:
  ```bash
-docker run -p 3000:3000 -e MONGODB_URI=mongodb://your-mongodb-host:27017/hotel swapnil0651/hotel-reception:v2
+docker run -p 3000:3000 -e MONGODB_URI=mongodb://your-mongodb-host:27017/hotel swapnil0651/hotel-reception:v3
 ```
 
    Replace `your-mongodb-host` with your MongoDB address.
