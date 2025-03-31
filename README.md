@@ -19,7 +19,7 @@ A web-based hotel reception system for managing customer check-ins and check-out
 
 ## Running with Docker
 
-## Pre-requisites for Running the App
+### Pre-requisites for Running the App
 
 Before running this app, ensure the following requirements are met:
 
@@ -80,6 +80,7 @@ Once Docker and Docker Compose are installed and running, you're ready to procee
 
 1. Use the file named docker-compose.alt.yml with the following content:
 
+```yaml
 version: '3'
 services:
   app:
@@ -100,24 +101,30 @@ services:
 
 volumes:
   mongo_data:
-  
+```
 
 2. Run the application:
-   docker-compose -f docker-compose.alt.yml up
+   ```bash
+docker-compose -f docker-compose.alt.yml up
+```
 
-3. Access the application at http://localhost:3001
+3. Access the application at [http://localhost:3001](http://localhost:3001)
 
 ### Option 2: Running the Docker image directly
 
 If you already have MongoDB running:
 
 1. Pull the image:
-   docker pull swapnil0651/hotel-reception:v2
+   ```bash
+docker pull swapnil0651/hotel-reception:v2
+```
 
 2. Run the container:
-   docker run -p 3000:3000 -e MONGODB_URI=mongodb://your-mongodb-host:27017/hotel swapnil0651/hotel-reception:v2
+   ```bash
+docker run -p 3000:3000 -e MONGODB_URI=mongodb://your-mongodb-host:27017/hotel swapnil0651/hotel-reception:v2
+```
 
-   Replace your-mongodb-host with your MongoDB address.
+   Replace `your-mongodb-host` with your MongoDB address.
 
 ## Manual Installation
 
@@ -129,25 +136,34 @@ If you already have MongoDB running:
 ### Setup
 
 1. Clone the repository:
-   git clone https://github.com/swapnil0651/hotel-reception.git
-   
-   cd hotel-reception
+   ```bash
+git clone https://github.com/swapnil0651/hotel-reception.git
 
-3. Install dependencies:
-   npm install
+cd hotel-reception
+```
 
-4. Make sure MongoDB is running locally
+2. Install dependencies:
+   ```bash
+npm install
+```
 
-5. Start the application:
-   npm start
+3. Make sure MongoDB is running locally
+
+4. Start the application:
+   ```bash
+npm start
+```
 
    For development with auto-restart:
-   npm run dev
+   ```bash
+npm run dev
+```
 
-6. Access the application at http://localhost:3000
+5. Access the application at [http://localhost:3000](http://localhost:3000)
 
 ## Project Structure
 
+```plaintext
 hotel-reception/
 ├── public/                 # Static files
 │   ├── index.html          # Check-in page
@@ -163,18 +179,19 @@ hotel-reception/
 ├── package.json            # Project dependencies
 ├── Dockerfile              # Docker configuration
 └── docker-compose.yml      # Docker Compose configuration
+```
 
 ## API Endpoints
 
-- GET /api/customers - Get all customers
-- GET /api/customers/:id - Get a specific customer
-- POST /api/customers - Create a new customer (check-in)
-- PATCH /api/customers/:id - Update customer information
-- DELETE /api/customers/:id - Delete a customer (check-out)
+- `GET /api/customers` - Get all customers
+- `GET /api/customers/:id` - Get a specific customer
+- `POST /api/customers` - Create a new customer (check-in)
+- `PATCH /api/customers/:id` - Update customer information
+- `DELETE /api/customers/:id` - Delete a customer (check-out)
 
 ## Troubleshooting
 
 - If you encounter connection issues with MongoDB when running locally, make sure MongoDB is running and accessible.
-- If you're using Docker and encounter port conflicts, you can modify the port mappings in the docker-compose.yml file.
-- For Docker-related issues, check container logs using: docker logs container_id
+- If you're using Docker and encounter port conflicts, you can modify the port mappings in the `docker-compose.yml` file.
+- For Docker-related issues, check container logs using: `docker logs container_id`.
 
